@@ -99,7 +99,7 @@
                         <div class="row justify-content-between align-items-end mb-15">
                             <div class="col-xl-4">
                                 <div class="section-tittle mb-30">
-                                    <h3>Whats New</h3>
+                                    <h3>Whats News</h3>
                                 </div>
                             </div>
                             <div class="col-xl-8 col-md-9">
@@ -109,7 +109,7 @@
                                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Lifestyle</a>
                                             <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Travel</a>
-                                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Fashion</a>
+                                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Diniy</a>
                                             <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-contact" aria-selected="false">Sports</a>
                                             <a class="nav-item nav-link" id="nav-Sports" data-toggle="tab" href="#nav-nav-Sport" role="tab" aria-controls="nav-contact" aria-selected="false">Technology</a>
                                         </div>
@@ -130,12 +130,12 @@
                                             <div class="col-xl-6 col-lg-12">
                                                 <div class="whats-news-single mb-40 mb-40">
                                                     <div class="whates-img">
-                                                        <img src="{% static 'assets/img/gallery/whats_news_details1.png' %}" alt="">
+                                                        <img src="{{what_news_hayot.image.url}}" alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="latest_news.html">Secretart for Economic Air plane that looks like</a></h4>
-                                                        <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez.</p>
+                                                        <h4><a href="#">{{what_news_hayot.name}}</a></h4>
+                                                        <span> {{what_news_hayot.created_at}} </span>
+                                                        <p> {{what_news_hayot.deskription|truncatewords:20}} </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -146,12 +146,12 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="{% static 'assets/img/gallery/whats_right_img1.png' %}" alt="">
+                                                                <img width="125" src="{{what_news_hayot.image.url}}" alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
-                                                                <p>Jun 19, 2020</p> 
+                                                                <h4><a href="latest_news.html">{{what_news_hayot.name|truncatewords:5}}</a></h4>
+                                                                <p>{{what_news_hayot.created_at}}</p> 
                                                             </div>
                                                         </div>
                                                     </div>
@@ -202,13 +202,12 @@
                                             <div class="col-xl-6">
                                                 <div class="whats-news-single mb-40">
                                                     <div class="whates-img">
-                                                        <img src="{% static 'assets/img/gallery/whats_right_img2.png' %}" alt="">
+                                                        <img src="{{what_news_sayoxat.image.url}}" alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">Secretart for Economic Air
-                                                            plane that looks like</a></h4>
-                                                        <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez.</p>
+                                                        <h4><a href="#">{{what_news_sayoxat.name}}</a></h4>
+                                                        <span> {{what_news_sayoxat.created_at}} </span>
+                                                        <p> {{what_news_sayoxat.deskription|truncatewords:20}} </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -219,12 +218,12 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="{% static 'assets/img/gallery/whats_right_img1.png' %}" alt="">
+                                                                <img width="125" src="{{what_news_sayoxat.image.url}}" alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
-                                                                <p>Jun 19, 2020</p> 
+                                                                <h4><a href="latest_news.html">{{what_news_sayoxat.name|truncatewords:10}}</a></h4>
+                                                                <p>{{what_news_sayoxat.created_at}}</p> 
                                                             </div>
                                                         </div>
                                                     </div>
@@ -275,13 +274,12 @@
                                             <div class="col-xl-6">
                                                 <div class="whats-news-single mb-40">
                                                     <div class="whates-img">
-                                                        <img src="{% static 'assets/img/gallery/whats_right_img4.png' %}" alt="">
+                                                        <img src="{{what_news_diniy.image.url}}" alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">Secretart for Economic Air
-                                                            plane that looks like</a></h4>
-                                                        <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez.</p>
+                                                        <h4><a href="#">{{what_news_diniy.name}}</a></h4>
+                                                        <span> {{what_news_diniy.created_at}} </span>
+                                                        <p> {{what_news_diniy.deskription|truncatewords:20}} </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -292,12 +290,12 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="{% static 'assets/img/gallery/whats_right_img1.png' %}" alt="">
+                                                                <img width="125" src="{{what_news_diniy.image.url}}" alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
-                                                                <p>Jun 19, 2020</p> 
+                                                                <h4><a href="latest_news.html">{{what_news_diniy.name|truncatewords:10}}</a></h4>
+                                                                <p>{{what_news_diniy.created_at}}</p> 
                                                             </div>
                                                         </div>
                                                     </div>
@@ -348,13 +346,12 @@
                                             <div class="col-xl-6">
                                                 <div class="whats-news-single mb-40">
                                                     <div class="whates-img">
-                                                        <img src="{% static 'assets/img/gallery/whats_right_img2.png' %}" alt="">
+                                                        <img src=" {{what_news.image.url}} " alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">Secretart for Economic Air
-                                                            plane that looks like</a></h4>
-                                                        <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez.</p>
+                                                        <h4><a href="#"> {{what_news.name}} </a></h4>
+                                                        <span> {{what_news.created_at}} </span>
+                                                        <p> {{what_news.deskription|truncatewords:20}} </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -365,12 +362,12 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="{% static 'assets/img/gallery/whats_right_img1.png' %}" alt="">
+                                                                <img width="125" src="{{what_news.image.url}}" alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
-                                                                <p>Jun 19, 2020</p> 
+                                                                <h4><a href="latest_news.html">{{what_news.name|truncatewords:10}}</a></h4>
+                                                                <p>{{what_news.created_at}}</p> 
                                                             </div>
                                                         </div>
                                                     </div>
@@ -421,13 +418,12 @@
                                             <div class="col-xl-6">
                                                 <div class="whats-news-single mb-40">
                                                     <div class="whates-img">
-                                                        <img src="{% static 'assets/img/gallery/whats_news_details1.png' %}" alt="">
+                                                        <img src="{{what_news_technology.image.url}}" alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">Secretart for Economic Air
-                                                            plane that looks like</a></h4>
-                                                        <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez.</p>
+                                                        <h4><a href="#">{{what_news_technology.name}}</a></h4>
+                                                        <span> {{what_news_technology.created_at}} </span>
+                                                        <p> {{what_news_technology.deskription|truncatewords:20}} </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -438,12 +434,12 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="{% static 'assets/img/gallery/whats_right_img1.png' %}" alt="">
+                                                                <img width="125" src="{{what_news_technology.image.url}}" alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
-                                                                <p>Jun 19, 2020</p> 
+                                                                <h4><a href="latest_news.html">{{what_news_technology.name|truncatewords:10}}</a></h4>
+                                                                <p>{{what_news_technology.created_at}}</p> 
                                                             </div>
                                                         </div>
                                                     </div>

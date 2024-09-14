@@ -3,7 +3,13 @@ from .models import News, Category,Tags
 from django.utils.safestring import mark_safe
 # Register your models here.
 
-admin.site.register(Tags)
+# admin.site.register(Tags)
+@admin.register(Tags)
+class TagsAdmin(admin.ModelAdmin):
+    list_display = ('id','name')
+    list_display_links = ('name',)
+    search_fields = ('name',)
+   
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
