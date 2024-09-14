@@ -1,10 +1,21 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Category, News
 
 
 def index(request):
-    return render(request, 'index.html')
+    newsers = News.objects.filter(is_active = True)
+    news_banner = newsers.filter(is_banner=True).last()
+    latest_news = newsers.order_by("-created_at").last()
+    top_news = newsers.order_by("-views").first()
+    latest_newses = newsers.order_by("-created_at")[:8]
+    context = {
+        "news_banner":news_banner,
+        "top_news":top_news,
+        "latest_news":latest_news,
+        "latest_newses":latest_newses,
+    }
+    return render(request, 'index.html',context)
 
 
 

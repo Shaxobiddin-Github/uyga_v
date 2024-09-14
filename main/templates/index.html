@@ -5,7 +5,7 @@
 {% block main %}
     <main>
         <!-- Trending Area Start -->
-        <div class="trending-area fix pt-25 gray-bg">
+        <div class="trending-area fix pt-25 gray-bg"> 
             <div class="container">
                 <div class="trending-main">
                     <div class="row">
@@ -16,11 +16,11 @@
                                 <div class="single-slider">
                                     <div class="trending-top mb-30">
                                         <div class="trend-top-img">
-                                            <img src="{% static 'assets/img/trending/trending_top2.jpg' %}" alt="">
+                                            <img src="{{news_banner.image.url}}" alt="">
                                             <div class="trend-top-cap">
-                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Business</span>
-                                                <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">Anna Lora Stuns In White At Her Australian Premiere</a></h2>
-                                                <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by Alice cloe   -   Jun 19, 2020</p>
+                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Xorij</span>
+                                                <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{ news_banner.name }}</a></h2>
+                                                <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">{{ news_banner.created_at }}  {{ news_banner.views }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -29,11 +29,11 @@
                                 <div class="single-slider">
                                     <div class="trending-top mb-30">
                                         <div class="trend-top-img">
-                                            <img src="{% static 'assets/img/trending/trending_top02.jpg' %}" alt="">
+                                            <img src="{{latest_news.image.url}}" alt="">
                                             <div class="trend-top-cap">
-                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Business</span>
-                                                <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">Anna Lora Stuns In White At Her Australian Premiere</a></h2>
-                                                <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by Alice cloe   -   Jun 19, 2020</p>
+                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Xorij</span>
+                                                <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{latest_news.name}}</a></h2>
+                                                <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">{{latest_news.created_at}}, {{latest_news.views}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -42,11 +42,11 @@
                                 <div class="single-slider">
                                     <div class="trending-top mb-30">
                                         <div class="trend-top-img">
-                                            <img src="{% static 'assets/img/trending/trending_top03.jpg' %}" alt="">
+                                            <img src="{{top_news.image.url}}" alt="">
                                             <div class="trend-top-cap">
-                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Business</span>
-                                                <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">Anna Lora Stuns In White At Her Australian Premiere</a></h2>
-                                                <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by Alice cloe   -   Jun 19, 2020</p>
+                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Xorij</span>
+                                                <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{top_news.name}}</a></h2>
+                                                <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">{{top_news.created_at}},  {{top_news.views}}</p>
                                             </div>
                                         </div>
                                     </div>
