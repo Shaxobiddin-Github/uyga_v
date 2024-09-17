@@ -19,7 +19,7 @@
                                             <img src="{{news_banner.image.url}}" alt="">
                                             <div class="trend-top-cap">
                                                 <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Xorij</span>
-                                                <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{ news_banner.name }}</a></h2>
+                                                <h2><a href="{% url 'detail' news_banner.id %}" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{ news_banner.name }}</a></h2>
                                                 <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">{{ news_banner.created_at }}  {{ news_banner.views }}</p>
                                             </div>
                                         </div>
@@ -32,7 +32,7 @@
                                             <img src="{{latest_news.image.url}}" alt="">
                                             <div class="trend-top-cap">
                                                 <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Xorij</span>
-                                                <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{latest_news.name}}</a></h2>
+                                                <h2><a href="{% url 'detail' latest_news.id %}" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{latest_news.name}}</a></h2>
                                                 <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">{{latest_news.created_at}}, {{latest_news.views}}</p>
                                             </div>
                                         </div>
@@ -45,7 +45,7 @@
                                             <img src="{{top_news.image.url}}" alt="">
                                             <div class="trend-top-cap">
                                                 <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Xorij</span>
-                                                <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{top_news.name}}</a></h2>
+                                                <h2><a href="{% url 'detail' top_news.id %}" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{top_news.name}}</a></h2>
                                                 <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">{{top_news.created_at}},  {{top_news.views}}</p>
                                             </div>
                                         </div>
@@ -63,7 +63,7 @@
                                             <img src="{% static 'assets/img/trending/trending_top3.jpg' %}" alt="">
                                             <div class="trend-top-cap trend-top-cap2">
                                                 <span class="bgb">FASHION</span>
-                                                <h2><a href="latest_news.html">Secretart for Economic Air
+                                                <h2><a href="{% url 'detail' latest_news.id %}">Secretart for Economic Air
                                                     plane that looks like</a></h2>
                                                 <p>by Alice cloe   -   Jun 19, 2020</p>
                                             </div>
@@ -133,7 +133,7 @@
                                                         <img src="{{what_news_hayot.image.url}}" alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">{{what_news_hayot.name}}</a></h4>
+                                                        <h4><a href="{% url 'detail' what_news_hayot.id %}">{{what_news_hayot.name}}</a></h4>
                                                         <span> {{what_news_hayot.created_at}} </span>
                                                         <p> {{what_news_hayot.deskription|truncatewords:20}} </p>
                                                     </div>
@@ -205,7 +205,7 @@
                                                         <img src="{{what_news_sayoxat.image.url}}" alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">{{what_news_sayoxat.name}}</a></h4>
+                                                        <h4><a href="{% url 'detail' what_news_sayoxat.id %}">{{what_news_sayoxat.name}}</a></h4>
                                                         <span> {{what_news_sayoxat.created_at}} </span>
                                                         <p> {{what_news_sayoxat.deskription|truncatewords:20}} </p>
                                                     </div>
@@ -222,7 +222,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">{{what_news_sayoxat.name|truncatewords:10}}</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news_sayoxat.id %}">{{what_news_sayoxat.name|truncatewords:10}}</a></h4>
                                                                 <p>{{what_news_sayoxat.created_at}}</p> 
                                                             </div>
                                                         </div>
@@ -234,7 +234,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news_sayoxat.id %}">Portrait of group of friends ting eat. market in.</a></h4>
                                                                 <p>Jun 19, 2020</p> 
                                                             </div>
                                                         </div>
@@ -246,7 +246,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorg">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news_sayoxat.id %}">Portrait of group of friends ting eat. market in.</a></h4>
                                                                 <p>Jun 19, 2020</p> 
                                                             </div>
                                                         </div>
@@ -258,7 +258,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorr">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news_sayoxat.id %}">Portrait of group of friends ting eat. market in.</a></h4>
                                                                 <p>Jun 19, 2020</p> 
                                                             </div>
                                                         </div>
@@ -277,7 +277,7 @@
                                                         <img src="{{what_news_diniy.image.url}}" alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">{{what_news_diniy.name}}</a></h4>
+                                                        <h4><a href="{% url 'detail' what_news_diniy.id %}">{{what_news_diniy.name}}</a></h4>
                                                         <span> {{what_news_diniy.created_at}} </span>
                                                         <p> {{what_news_diniy.deskription|truncatewords:20}} </p>
                                                     </div>
@@ -294,7 +294,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">{{what_news_diniy.name|truncatewords:10}}</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news_diniy.id %}">{{what_news_diniy.name|truncatewords:10}}</a></h4>
                                                                 <p>{{what_news_diniy.created_at}}</p> 
                                                             </div>
                                                         </div>
@@ -306,7 +306,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news_diniy.id %}">Portrait of group of friends ting eat. market in.</a></h4>
                                                                 <p>Jun 19, 2020</p> 
                                                             </div>
                                                         </div>
@@ -318,7 +318,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorg">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news_diniy.id %}">Portrait of group of friends ting eat. market in.</a></h4>
                                                                 <p>Jun 19, 2020</p> 
                                                             </div>
                                                         </div>
@@ -330,7 +330,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorr">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news_diniy.id %}">Portrait of group of friends ting eat. market in.</a></h4>
                                                                 <p>Jun 19, 2020</p> 
                                                             </div>
                                                         </div>
@@ -349,7 +349,7 @@
                                                         <img src=" {{what_news.image.url}} " alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#"> {{what_news.name}} </a></h4>
+                                                        <h4><a href="{% url 'detail' what_news.id %}"> {{what_news.name}} </a></h4>
                                                         <span> {{what_news.created_at}} </span>
                                                         <p> {{what_news.deskription|truncatewords:20}} </p>
                                                     </div>
@@ -366,7 +366,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">{{what_news.name|truncatewords:10}}</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news.id %}">{{what_news.name|truncatewords:10}}</a></h4>
                                                                 <p>{{what_news.created_at}}</p> 
                                                             </div>
                                                         </div>
@@ -378,7 +378,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news.id %}">Portrait of group of friends ting eat. market in.</a></h4>
                                                                 <p>Jun 19, 2020</p> 
                                                             </div>
                                                         </div>
@@ -390,7 +390,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorg">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news.id %}">Portrait of group of friends ting eat. market in.</a></h4>
                                                                 <p>Jun 19, 2020</p> 
                                                             </div>
                                                         </div>
@@ -402,7 +402,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorr">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news.id %}">Portrait of group of friends ting eat. market in.</a></h4>
                                                                 <p>Jun 19, 2020</p> 
                                                             </div>
                                                         </div>
@@ -421,7 +421,7 @@
                                                         <img src="{{what_news_technology.image.url}}" alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">{{what_news_technology.name}}</a></h4>
+                                                        <h4><a href="{% url 'detail' what_news_technology.id %}">{{what_news_technology.name}}</a></h4>
                                                         <span> {{what_news_technology.created_at}} </span>
                                                         <p> {{what_news_technology.deskription|truncatewords:20}} </p>
                                                     </div>
@@ -438,7 +438,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">{{what_news_technology.name|truncatewords:10}}</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news_technology.id %}">{{what_news_technology.name|truncatewords:10}}</a></h4>
                                                                 <p>{{what_news_technology.created_at}}</p> 
                                                             </div>
                                                         </div>
@@ -450,7 +450,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news_technology.id %}">Portrait of group of friends ting eat. market in.</a></h4>
                                                                 <p>Jun 19, 2020</p> 
                                                             </div>
                                                         </div>
@@ -462,7 +462,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorg">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news_technology.id %}">Portrait of group of friends ting eat. market in.</a></h4>
                                                                 <p>Jun 19, 2020</p> 
                                                             </div>
                                                         </div>
@@ -474,7 +474,7 @@
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorr">FASHION</span>
-                                                                <h4><a href="latest_news.html">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4><a href="{% url 'detail' what_news_technology.id %}">Portrait of group of friends ting eat. market in.</a></h4>
                                                                 <p>Jun 19, 2020</p> 
                                                             </div>
                                                         </div>

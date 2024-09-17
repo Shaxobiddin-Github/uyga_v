@@ -53,6 +53,12 @@ def elements(request):
     return render(request, 'elements.html')
 
 def latest_news(request):
+    newsers = News.objects.filter(is_active = True)
+    latest_news = newsers.order_by("-created_at").last()
+
+    context = {
+        "latest_news":latest_news,
+    }
     return render(request, 'latest_news.html')
 
 def main(request):
@@ -60,3 +66,11 @@ def main(request):
 
 
 
+def detail(request, pk):
+    news = News.objects.get(pk=pk)
+    categories = Category.objects.all()
+    context = {
+        "news":news,
+        "categories":categories
+    }
+    return render(request, "blog_details.html",context)

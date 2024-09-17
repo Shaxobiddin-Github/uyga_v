@@ -13,4 +13,5 @@ urlpatterns = [
     path('elements',elements,name="elements"),
     path('latest_news',latest_news,name="latest_news"),
     path('main',main,name="main"),
+    path('detail/<int:pk>/', detail, name='detail'),
 ]
