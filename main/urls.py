@@ -14,4 +14,7 @@ urlpatterns = [
     path('latest_news',latest_news,name="latest_news"),
     path('main',main,name="main"),
     path('detail/<int:pk>/', detail, name='detail'),
+    path('register/',register, name='register'),
+    path('login/',user_login, name='login'),
+    path('logout/',user_logout, name='logout'),
 ]

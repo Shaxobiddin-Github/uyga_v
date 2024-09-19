@@ -94,14 +94,25 @@
                                         <li><a href="{% url 'about' %}">about</a></li>
                                         <li><a href="{% url 'categori' %}">Category</a></li>
                                         <li><a href="{% url 'latest_news' %}">Latest News</a></li>
-                                        <li><a href="#">Pages</a>
+                                        <li><a href="{% url 'contact' %}">Bog'lanish</a></li>
+                                        <li><a  class="nav-item nav-link">{{request.user.username}}</a></li>
                                             <ul class="submenu">
                                                 <li><a href="{% url 'blog' %}">Blog</a></li>
                                                 <li><a href="{% url 'blog_details' %}">Blog Details</a></li>
                                                 <li><a href="{% url 'elements' %}">Element</a></li>
+                                                {% if request.user.is_authenticated %}
+                                                <li><a href="{% url 'logout' %}">Log_out</a></li>
+                                                {% else %}
+                                                <li><a href="{% url 'register' %}">Ruyxatdan utish</a></li>
+                                                <li><a href="{% url 'login' %}">Log_in</a></li>
+                                                
+                                                {% endif %}
+                                                
                                             </ul>
                                         </li>
-                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                        
+                                        
+                                        
                                     </ul>
                                 </nav>
                             </div>
