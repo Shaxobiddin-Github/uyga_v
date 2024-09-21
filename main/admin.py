@@ -1,9 +1,11 @@
 from django.contrib import admin
-from .models import News, Category,Tags
+from .models import News, Category,Tags,Comment
 from django.utils.safestring import mark_safe
 # Register your models here.
 
 # admin.site.register(Tags)
+
+admin.site.register(Comment)
 @admin.register(Tags)
 class TagsAdmin(admin.ModelAdmin):
     list_display = ('id','name')

@@ -24,6 +24,71 @@
 		<link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
 		<link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
 		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+
+        <style>
+            .success{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #1bfc07;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                font-size: 16px;
+                padding-left: 900px;
+                border-radius: 5px;
+               
+    
+    
+            }
+            .warning{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: yellow;
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                padding-left: 900px;
+                border-radius: 5px;
+               
+    
+    
+            }
+            .success{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #1bfc07;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                font-size: 16px;
+                padding-left: 900px;
+                border-radius: 5px;
+               
+    
+    
+            }
+            .xatolik{
+                
+                    color: red;
+                    font-size: 20px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    transition: color 0.3s ease;
+                    &:hover{
+                        color: rgb(150, 42, 42);
+                    }
+    
+                
+            }
+        </style>
+
+
+
 	</head>
 <body>
 <!-- Preloader Start -->
@@ -38,6 +103,15 @@
     </div>
 </div>
 <!-- Preloader Start -->
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+    {% endfor %}
+
+</ul>
+{% endif %}
 <header>
     <!-- Header Start -->
     <div class="header-area">
@@ -91,15 +165,18 @@
                                 <nav>                  
                                     <ul id="navigation">
                                         <li><a href="{% url 'home' %}">Home</a></li>
-                                        <li><a href="{% url 'about' %}">about</a></li>
+                                        
                                         <li><a href="{% url 'categori' %}">Category</a></li>
                                         <li><a href="{% url 'latest_news' %}">Latest News</a></li>
                                         <li><a href="{% url 'contact' %}">Bog'lanish</a></li>
-                                        <li><a  class="nav-item nav-link">{{request.user.username}}</a></li>
+                                        <li><a href="#">Pages</a>
                                             <ul class="submenu">
                                                 <li><a href="{% url 'blog' %}">Blog</a></li>
                                                 <li><a href="{% url 'blog_details' %}">Blog Details</a></li>
                                                 <li><a href="{% url 'elements' %}">Element</a></li>
+                                                <li><a href="{% url 'about' %}">about</a></li>
+                                                <li><a  class="nav-item nav-link">{{request.user.username}}</a></li>
+                                                <hr>
                                                 {% if request.user.is_authenticated %}
                                                 <li><a href="{% url 'logout' %}">Log_out</a></li>
                                                 {% else %}
@@ -107,6 +184,9 @@
                                                 <li><a href="{% url 'login' %}">Log_in</a></li>
                                                 
                                                 {% endif %}
+                                            </ul>
+                                        </li>
+                                                
                                                 
                                             </ul>
                                         </li>
@@ -136,6 +216,7 @@
                         <div class="col-12">
                             <div class="mobile_menu d-block d-md-none"></div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
