@@ -19,4 +19,5 @@ urlpatterns = [
     path('logout/',user_logout, name='logout'),
     path('change/',change_news, name='change'),
     path('save_comments/<int:news_id>', save_comments, name='add_comments'),
+    path('send_email/', send_message_to_email, name='send_email'),
 ]

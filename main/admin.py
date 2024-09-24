@@ -1,11 +1,15 @@
 from django.contrib import admin
 from .models import News, Category,Tags,Comment
 from django.utils.safestring import mark_safe
+from django import forms
+from ckeditor.widgets import CKEditorWidget
+
+
 # Register your models here.
 
-# admin.site.register(Tags)
 
-admin.site.register(Comment)
+
+
 @admin.register(Tags)
 class TagsAdmin(admin.ModelAdmin):
     list_display = ('id','name')
@@ -18,6 +22,22 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
     list_display_links = ('name',)
+
+
+
+class CommentInline(admin.TabularInline):
+    model = Comment
+    extra = 1
+    readonly_fields = ('user', 'news', 'text', 'created')
+
+
+
+class NewsAdminForm(forms.ModelForm):
+    deskription = forms.CharField(widget=CKEditorWidget())
+    class Meta:
+        model = News
+        fields = '__all__'
+
     
     
 @admin.register(News)
